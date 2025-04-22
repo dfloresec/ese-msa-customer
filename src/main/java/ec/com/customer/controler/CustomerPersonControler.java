@@ -22,10 +22,10 @@ public class CustomerPersonControler {
 	public ResponseEntity<List<CustomerPerson>> getAllPersons() {
 		System.out.println("Inicia");
 		List<CustomerPerson> list = customerPersonService.getCustomerPersons();
-		for (CustomerPerson customerPerson : list) {
-			System.out.println(">> " + customerPerson.getId());
-		}
-		System.out.println("Fin");
+//		for (CustomerPerson customerPerson : list) {
+////			System.out.println(">> " + customerPerson.getId());
+//		}
+//		System.out.println("Fin");
 		return ResponseEntity.ok(list);
 	}
 
