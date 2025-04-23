@@ -1,12 +1,11 @@
 package ec.com.customer.exception;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+public class ResourceNotFoundException extends RuntimeException {
 
-@AllArgsConstructor
-@Getter
-public class ResourceNotFoundException {
+	private static final long serialVersionUID = 1L;
 
-	private String message;
+	public ResourceNotFoundException(String message) {
+		super(message);
+	}
 
 }
