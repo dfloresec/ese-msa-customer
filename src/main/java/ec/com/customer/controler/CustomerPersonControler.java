@@ -1,12 +1,12 @@
 package ec.com.customer.controler;
 
 import java.util.List;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import ec.com.customer.services.CustomerPersonService;
 import ec.com.customer.services.entities.CustomerPerson;
 import lombok.RequiredArgsConstructor;
@@ -34,10 +34,10 @@ public class CustomerPersonControler {
 //		return personRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Person not found"));
 //	}
 
-//	@PostMapping
-//	public CustomerPerson createPerson(@RequestBody CustomerPerson person) {
-//		return customerPersonRepository.save(person);
-//	}
+	@PostMapping
+	public CustomerPerson createPerson(@RequestBody CustomerPerson person) {
+		return customerPersonService.saveCustomerPersons(person);
+	}
 
 //	@PutMapping("/{id}")
 //	public CustomerPerson updatePerson(@PathVariable Long id, @RequestBody CustomerPerson personDetails) {

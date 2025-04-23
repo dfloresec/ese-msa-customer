@@ -16,4 +16,8 @@ public class CustomerPersonService {
     return customerPersonRepository.findAll();
   }
 
+  public CustomerPerson saveCustomerPersons(CustomerPerson customerPerson) {
+    return customerPersonRepository.save(customerPerson);
+  }
+
 }

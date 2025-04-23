@@ -20,9 +20,9 @@ import lombok.Data;
 //@DiscriminatorColumn(name = "DTYPE")
 
 public class Person {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	private Long id;
 	private String name;
 	private String gender;
 	private int age;

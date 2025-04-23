@@ -14,12 +14,12 @@ import lombok.Setter;
 @Setter
 public class CustomerPerson extends Person {
 
-//  @Id
-//  @GeneratedValue(strategy = GenerationType.IDENTITY)
-//  private Long clienteid;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long id;
 
   private String password;
 
-  private Boolean state;
+  private boolean state;
 
 }
